@@ -1,0 +1,81 @@
+/*TABLA*/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+/*TABLA*/
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+button {
+    font-family: Helvetica, sans-serif;
+}
+
+/*BOTON*/
+
+.navbar {
+    width: 100%;
+    background-color: #cfc6c6;
+    overflow: auto;
+}
+
+.navbar button {
+    float: left;
+    padding: 12px;
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+}
+/*Color al pasar por el boton*/
+.navbar button:hover {
+    background-color: #04AA6D;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar button {
+        float: none;
+        display: block;
+    }
+}
+
+/*BOTON*/
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+div {
+    border-radius: 15px;
+    /*Borde esquinero*/
+    background-color: #f2f2f2;
+    padding: 6px;
+}

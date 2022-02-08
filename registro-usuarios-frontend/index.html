@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Estilos CSS/style.css">
+</head>
+
+<body class="w3-light-grey">
+
+    <!-- Page Container -->
+    <div class="w3-content w3-margin-top" style="max-width:1400px;">
+    
+      <!-- The Grid -->
+      <div class="w3-row-padding">
+        
+        <!-- Left Column -->
+        <div class="w3-third">
+          <div class="w3-white w3-text-grey w3-card-4">
+            <div class="w3-display-container">
+              <img src="https://www.uteq.edu.ec/images/escudouteq.png" style="width:100%" alt="Avatar"><!--Logo de la UTEQ-->
+              <div class="w3-display-bottomleft w3-container w3-text-black">
+                <h2>UTEQ</h2>
+              </div>
+            </div>
+            <div class="w3-container">
+              <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Universidad Técnica Estatal de Quevedo"</p>
+              <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Av. Quito km. 1 1/2 vía a Santo Domingo de los Tsáchilas</p>
+              <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>info@uteq.edu.ec</p>
+              <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>(+593) 5 3702-220 Ext. 8001</p>
+              <hr>
+              <br>
+            </div>
+          </div>
+          <br>
+        <!-- End Left Column -->
+        </div>
+        
+    
+        <!-- Right Column -->
+        <div class="w3-twothird">
+        
+          <div class="w3-container w3-card w3-white">
+            <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Registro de estudiantes</h2>
+               
+               <hr>
+               <!--w3-container-->
+               <div class="w3-container">
+               <br>
+                  <h4>Nombre:<input id="nombre" type="text" placeholder="Ingresa nombre"></h4>
+                  <h4>Apellido: <input id="apellido" type="text" placeholder="Ingresar apellido"><br></h4>
+                  <h4>Fecha de nacimiento: <input id="fechaNacimiento" type="date" placeholder="Ingresar fecha de nacimiento"><br></h4>
+                  <h4>País:<select id="pais" type="text">
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Panama">Colombia</option>
+                    <option value="Guatemala">Perú</option>
+                    <option value="El salvador">Argentina</option>
+                </select><h4>
+                <div class="navbar">
+                    <button id="btn-guardar" type="button" onclick="guardar()" type="submit">Guardar</button>
+                    <button id="btn-actualizar" type="button" onclick="actualizar()" style="display: none;">Actualizar</button>
+                    <button type="button" onclick="limpiar()">Nuevo</button>
+                </div>
+                <hr>
+                <table id="tabla-usuarios" border="3" cellpadding="5">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Fecha</th>
+                            <th>País</th>
+                            <th>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                
+                    </tbody>
+                   </table>
+                  <hr>
+              <!--w3-container-->
+            </div>
+            <!--w3-container w3-card w3-white-->
+          </div>
+            
+    
+        <!-- End Right Column -->
+        </div>
+        
+      <!-- End Grid -->
+      </div>
+      
+      <!-- End Page Container -->
+    </div>
+    
+    <footer class="w3-container w3-teal w3-center w3-margin-top">
+      <p>Redes sociales.</p>
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <p>Página oficial <a href="https://www.uteq.edu.ec/" target="_blank">UTEQ</a></p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="js/controlador.js"></script>
+    
+    </body>
+    
+    </html>
+    
