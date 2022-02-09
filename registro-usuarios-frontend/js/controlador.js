@@ -5,7 +5,7 @@ var usuarioSeleccionado;
 //la url se mantiene, entonces se crea una constante
 //ruta del backend
 const url = '../../registro-usuarios/registro-usuarios-backend/api/usuarios.php';
-//Funsion obtener usuarios
+//Función obtener usuarios
 function obtenerUsuarios() {
     //Esto es una petición asíncrona!
     axios({
@@ -14,10 +14,10 @@ function obtenerUsuarios() {
         url: url,
         //tipo de respuesta Json 
         responseType: 'json'
-        //funsion que se ejecuta cuando responde el servidor 
+        //Función que se ejecuta cuando responde el servidor 
     }).then(res => {
         console.log(res.data);
-        //asigancion al arreglo con la variable global
+        //asiganción al arreglo con la variable global
         this.usuarios = res.data;
         llenarTabla();
     }).catch(error => {
@@ -28,7 +28,7 @@ function obtenerUsuarios() {
 //llamado inmediato para que aparesca al inicio
 obtenerUsuarios();
 
-//funsion que se encarga de recorrer el objeto Json para generar dinamicamente la informacion
+//Función que se encarga de recorrer el objeto Json para generar dinámicamente la información
 function llenarTabla() {
     //se vacia la tabla para evitar que se repitan los datos
     document.querySelector('#tabla-usuarios tbody').innerHTML ='';
@@ -49,7 +49,7 @@ function llenarTabla() {
             </tr>`;
     }
 }
-//funsion para eliminar un usuario
+//función para eliminar un usuario
 function eliminar(indice) {
     //imprimir en la consola el indice 
     console.log('Eliminar el elemento con el índice ' + indice);
@@ -70,7 +70,7 @@ function eliminar(indice) {
         console.error(error);
     });
 }
-//funsion para guardar un usuario
+//función para guardar un usuario
 function guardar(){
     //se construye el json usuario que se va a guardar
     let usuario={
@@ -101,7 +101,7 @@ function guardar(){
         console.error(error);
     });
 }
-//funsion para limpiar los campos ya utilizados
+//Función para limpiar los campos ya utilizados
 function limpiar(){
     document.getElementById('nombre').value=null;
     document.getElementById('apellido').value=null;
@@ -111,7 +111,7 @@ function limpiar(){
     document.getElementById('btn-guardar').style.display='inline';
     document.getElementById('btn-actualizar').style.display='none';
 }
-//funsion para actualizar
+//Función para actualizar
 function actualizar(){
     //se construye el json usuario que se va a actualizar
     let usuario={
@@ -126,7 +126,7 @@ function actualizar(){
     axios({
         //metodo PUT
         method: 'PUT',
-        //la url se mantiene + el parametro (indice a actualizar)
+        //la url se mantiene + el parámetro (índice a actualizar)
         url: url + `?id=${usuarioSeleccionado}`,
         //tipo de respuesta Json 
         responseType: 'json',
@@ -143,7 +143,7 @@ function actualizar(){
     });
 }
 
-//funsion para tomar un elemento, llenar los campos del elemnto tomado
+//Función para tomar un elemento, llenar los campos del elemnto tomado
 //y poder editarlo
 function seleccionar(indice){
     usuarioSeleccionado=indice;

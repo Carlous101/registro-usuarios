@@ -77,7 +77,7 @@
         }
 
         //CRUD
-        //metodo guardar
+        //Método guardar
         public function guardarUsuario(){
             //cadena con la informacion que se va a leer desde   "../data/usuarios.json"
             $contenidoArchivo = file_get_contents("../data/usuarios.json");
@@ -100,7 +100,7 @@
             //cerrar el flujo del archivo
             fclose($archivo);
         }
-        //metodo obtener usuarios
+        //Método obtener usuarios
         //static para acceder a los datos sin crear instancias
         public static function obtenerUsuarios(){
             //cadena con la informacion que se va a leer desde   "../data/usuarios.json"
@@ -119,7 +119,7 @@
             $usuarios = json_decode($contenidoArchivo, true);
             echo json_encode($usuarios[$indice]);
         }
-        //metodo para actualizar
+        //Método para actualizar
         //entra como parametro el indice para actualizar
         public function actualizarUsuario($indice){
             //cadena con la informacion que se va a leer desde   "../data/usuarios.json"
@@ -145,7 +145,7 @@
             fclose($archivo);
 
         }
-        //Metodo para eliminar
+        //Método para eliminar
         //entra como parametro el indice para eliminar
         public static function eliminarUsuario($indice){
             //cadena con la informacion que se va a leer desde   "../data/usuarios.json"
